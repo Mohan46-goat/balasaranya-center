@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../styles/Home.scss';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -11,8 +11,7 @@ import img2 from '../assets/img2.jpeg';
 import img3 from '../assets/img3.jpeg';
 import img4 from '../assets/img4.jpeg';
 import pic from '../assets/pic.jpeg';
-import { WOW } from 'wowjs';
-import 'animate.css';
+
 
 
 
@@ -34,16 +33,6 @@ const Home = () => {
           image: service6,
         },
       ];
-      useEffect(() => {
-        const wow = new WOW({
-          boxClass: 'wow', // Class for animated elements
-          animateClass: 'animate__animated', // Animate.css class
-          offset: 0, // Distance to trigger animation
-          mobile: true, // Trigger animations on mobile
-          live: true, // Act on asynchronously loaded content
-        });
-        wow.init();
-      }, []);
     return (
         <>
             {/* PRE LOADER */}

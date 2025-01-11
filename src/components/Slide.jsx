@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { createRoot } from 'react-dom/client';
 import "../styles/Slide.scss";
 
 const Slide = ({ imageSrc, title, subtitle }) => (
