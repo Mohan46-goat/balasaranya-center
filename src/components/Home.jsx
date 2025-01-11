@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Home.scss';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -10,26 +10,40 @@ import img1 from '../assets/img1.jpeg';
 import img2 from '../assets/img2.jpeg';
 import img3 from '../assets/img3.jpeg';
 import img4 from '../assets/img4.jpeg';
+import pic from '../assets/pic.jpeg';
+import { WOW } from 'wowjs';
+import 'animate.css';
+
 
 
 const Home = () => {
     const slides = [
         {
-          title: 'First title',
-          subtitle: 'First subtitle',
+          title: 'Balasaranya Rehabilitation Center',
+        //   subtitle: 'First subtitle',
           image: service4,
         },
         {
-          title: 'Second title',
-          subtitle: 'Second subtitle',
+          title: 'Balasaranya Rehabilitation Center',
+        //   subtitle: 'Second subtitle',
           image: service5,
         },
         {
-          title: 'Third title',
-          subtitle: 'Third subtitle',
+          title: 'Balasaranya Rehabilitation Center',
+        //   subtitle: 'Third subtitle',
           image: service6,
         },
       ];
+      useEffect(() => {
+        const wow = new WOW({
+          boxClass: 'wow', // Class for animated elements
+          animateClass: 'animate__animated', // Animate.css class
+          offset: 0, // Distance to trigger animation
+          mobile: true, // Trigger animations on mobile
+          live: true, // Act on asynchronously loaded content
+        });
+        wow.init();
+      }, []);
     return (
         <>
             {/* PRE LOADER */}
@@ -40,7 +54,7 @@ const Home = () => {
             </section>
 
             {/* HEADER */}
-            <header>
+            {/* <header>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 col-sm-5">
@@ -53,7 +67,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </header>
+            </header> */}
             
             <div className="home-container">
       <Carousel autoPlay={true} useRightLeftTriangles={true} slides={slides} />
@@ -105,16 +119,17 @@ const Home = () => {
                     <div className="row">
                         <div className="col-md-6 col-sm-6">
                             <div className="about-info">
-                                <h2 className="wow fadeInUp" data-wow-delay="0.6s">Welcome to Balasaranya<i className="fa fa-h-square"></i> Rehabilition Center</h2>
+                                <h2 className="wow fadeInUp" data-wow-delay="0.6s">Welcome to Balasaranya Rehabilition Center</h2>
                                 <div className="wow fadeInUp" data-wow-delay="0.8s">
                                     <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
                                     <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
                                 </div>
                                 <figure className="profile wow fadeInUp" data-wow-delay="1s">
-                                    <img src="http://res.cloudinary.com/dgpmuegqe/image/upload/v1521422848/author-image_lhyszl.jpg" className="img-responsive" alt="" />
+                                    <img src={pic} className="img-responsive" alt="" />
                                     <figcaption>
-                                        <h3>Dr. Neil Jackson</h3>
-                                        <p>General Principal</p>
+                                        <h3>Dr.B. Ayyappan D P M.,
+                                        </h3>
+                                        <p>CONSULTANT PSYCHIATRIST</p>
                                     </figcaption>
                                 </figure>
                             </div>
@@ -136,13 +151,15 @@ const Home = () => {
                         {/* Repeat for each doctor */}
                         <div className="col-md-4 col-sm-6">
                             <div className="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                                <img src="https://media.gettyimages.com/id/1938542779/photo/senior-medical-check-up.jpg?s=612x612&w=0&k=20&c=v-S0_rxA9t6BeZvQWPo64DLHFxO5vVvPww7jObeIh9E=" className="img-responsive" alt="" />
+                                <img src={pic} className="img-responsive" alt="" />
                                 <div className="team-info">
-                                    <h3>Nate Baston</h3>
-                                    <p>General Principal</p>
+                                    <h3>Dr.B. Ayyappan D P M.,</h3>
+                                    <p>CONSULTANT PSYCHIATRIST</p>
                                     <div className="team-contact-info">
                                         <p><i className="fa fa-phone"></i> 010-020-0120</p>
                                         <p><i className="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
+                                        <p><i className="fa fa-envelope-o"></i> <a href="#">General Principal</a></p>
+                                        <p><i className="fa fa-envelope-o"></i> <a href="#">BalaSaranya Center</a></p>
                                     </div>
                                     <ul className="social-icon">
                                         <li><a href="#" className="fa fa-linkedin-square"></a></li>

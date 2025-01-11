@@ -13,11 +13,11 @@ h1, h2, h3 {
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 body {
     background: #C8DCC4;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
 

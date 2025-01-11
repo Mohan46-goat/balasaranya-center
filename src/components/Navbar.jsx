@@ -128,7 +128,7 @@ const Navbar = () => {
                           </li>
                           <li className="sketch">
                           <Link to="/admission">
-                              Frequently Asked Questions
+                              FAQs
                           </Link>
                           </li>
                           <li className="sketch">
@@ -243,12 +243,12 @@ const Navbar = () => {
                         <ul>
                           <li className="sketch">
                           <Link to="/ourfocus">
-                              Skilled/Rehabilation Longterm Care
+                              Rehabilation Longterm Care
                             </Link>
                           </li>
                           <li className="sketch">
                           <Link to="/ourfocus">
-                              Medicated Supported Recovery
+                              Medicated Recovery
                             </Link>
                           </li>
                         </ul>
