@@ -1,0 +1,202 @@
+.navbar-sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: 1000; // Ensures the navbar stays above other content
+    }
+.navbar-default {
+    background: #4CAF50;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.075);
+    border: 2px solid #4CAF50;
+    margin-bottom: 0;
+    padding: 20px;
+  
+    .navbar-brand {
+      color: #e6eee7;
+      font-weight: 500;
+      font-size: 15px;
+      text-transform: uppercase;
+      &:hover {
+        color: #a5c422;
+      }
+    }
+  
+    .navbar-nav {
+      li {
+        a {
+          color: #fdfafa;
+          font-size: 13px;
+          font-weight: 500;
+          padding: 15px 8px;
+          transition: all 0.4s ease-in-out;
+          text-transform: uppercase;
+  
+          &:hover {
+            color: #a5c422;
+            text-decoration: none;
+          }
+        }
+  
+        &.appointment-btn a {
+          background: #a5c422;
+          border-radius: 3px;
+          color: #ffffff;
+          padding: 12px 20px;
+          text-transform: uppercase;
+  
+          &:hover {
+            background: #4267b2;
+            color: #ffffff;
+          }
+        }
+      }
+  
+      .dropdown {
+        position: relative;
+  
+        &.open > .dropdown-menu {
+          display: block;
+        }
+  
+        .dropdown-toggle {
+          cursor: pointer;
+          &:after {
+            content: '\25BC';
+            font-size: 12px;
+            margin-left: 5px;
+          }
+        }
+  
+        .dropdown-menu {
+          background: #bdd8a2;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          display: none;
+          left: 0;
+          padding: 15px;
+          position: absolute;
+          top: 100%;
+          width: fit-content;
+          z-index: 1000;
+  
+          .inner-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 10px;
+  
+            .column {
+              flex: 1;
+              min-width: 230px;
+  
+              h3 {
+                color: #393939;
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 10px;
+              }
+  
+              ul {
+                list-style: none;
+                padding: 0;
+  
+                li {
+                  a {
+                    color: #555555;
+                    font-size: 14px;
+                    text-decoration: none;
+  
+                    &:hover {
+                      color: #a5c422;
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .navbar-toggle {
+      background-color: #4e4c4c;
+      border: none;
+      padding: 10px;
+  
+      &:focus {
+        outline: none;
+      }
+  
+      .icon-bar {
+        background-color: #393939;
+        height: 2px;
+        width: 22px;
+        margin: 4px 0;
+      }
+    }
+  
+    .collapse {
+      display: none;
+  
+      &.show {
+        display: block;
+      }
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-nav {
+      display: block;
+      padding-left: 0;
+      margin-top: 20px;
+  
+      li {
+        text-align: center;
+  
+        .dropdown-menu {
+          position: static;
+          box-shadow: none;
+          padding: 10px 0;
+  
+          .inner-wrapper {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      li {
+        a {
+          font-size: 12px;
+        }
+  
+        &.appointment-btn a {
+          font-size: 12px;
+          padding: 10px 15px;
+        }
+      }
+    }
+  
+    .navbar-toggle {
+      padding: 5px;
+  
+      .icon-bar {
+        height: 2px;
+        width: 18px;
+      }
+    }
+  }
+  /* Styling for the logo */
+/* Logo Styling */
+.logo {
+  height: 24px; /* Adjust the logo height */
+  margin-right: 5px;
+  width: auto;  /* Maintain aspect ratio */
+  float: left;
+}
+
+.sketch{
+  padding-bottom: 6px;
+}
